@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {CategoryI} from "../interfaces/category.interfaces";
 
 @Component({
   selector: 'app-categories-list-page',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesListPageComponent implements OnInit {
 
-  constructor() { }
+  categories: Array<CategoryI> = [
+    {id: 1, title: 'Развлечение', subtitle: 'Развлечение subtitle', description: 'Описание раздела с развлечениями'},
+    {id: 2, title: 'Обучение', subtitle: 'Обучение subtitle', description: 'Описание раздела с обучением'}
+  ]
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
